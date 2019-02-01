@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Anomaly Experiment Submission - Anomaly</title>
+  <meta name="description" content="Anomaly Experiment Submission">
+  <meta name="author" content="Kristof Böhmer">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script src="js/scripts.js?v=1.0"></script>
+  
+  <p id="TraceAndProcessInfo"></p>
+  
+  <form>
+  <h1>First: Select the event which you assume is most likely affected by an anomaly:</h1>
+  <fieldset id="EventSelection"></fieldset>
+  </form>
+  
+
+  <form id="IssueForm">
+  <h1>Second: Select the issue/anomaly which you have identified:</h1>   
+  <h2>Anomalies related to activities</h2>   
+  <fieldset id="ActivityIssue" disabled="disabled">
+      
+    <label><input type="radio" name="issue" value="MissingActivity"/>Missing Activity</label><br>
+    <label><input type="radio" name="issue" value="SwapActivity"/>Swap Activity</label><br>
+    <label><input type="radio" name="issue" value="NewActivity"/>New Activity</label><br>
+  </fieldset>
+  <h2>Anomalies related to resources</h2>     
+  <fieldset id="ResourceIssue" disabled="disabled">
+    <label><input type="radio" name="issue" value="SoDResource"/>Separation of duty (SoD) violation, Resource</label><br>
+    <label><input type="radio" name="issue" value="BoDResource"/>Binding of duty (BoD) violation, Resource</label><br>
+  </fieldset>
+  <h2>Anomalies related to time</h2>   
+  <fieldset id="TimeIssue" disabled="disabled"/>
+   <label><input type="radio" name="issue" value="UnexpectedTemporal"/>Unexpected Temporal Behavior</label><br>
+  </fieldset> 
+  </form>
+
+
+  <h1>Third: Finalize your anomaly report by submitting it.</h1>   
+
+  <button id='submitnext'  style="font-size : 2em;background-color:Salmon" >Submit, report an additional anomaly</button>  <br><br>
+  <button id='submitfinish'  style="font-size : 2em;background-color:LightGreen" >Submit, I assume I have found ALL anomalies</button>
+<br><br><br><br>
+  <button id='dbtoconsol' >Log DB to console</button>
+
+</body>
+</html>
